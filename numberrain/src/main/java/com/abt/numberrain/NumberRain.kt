@@ -8,9 +8,7 @@ import android.widget.LinearLayout
 class NumberRain(context: Context, attrs: AttributeSet?) : LinearLayout(context, attrs) {
 
     private var normalColor: Int = Color.GREEN
-
     private var hightLightColor: Int = Color.YELLOW
-
     private var textSize = 15 * resources.displayMetrics.density
 
     constructor(context: Context) : this(context, null)
@@ -38,7 +36,6 @@ class NumberRain(context: Context, attrs: AttributeSet?) : LinearLayout(context,
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         addRainItems()
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-
     }
 
     private fun addRainItems() {
@@ -52,7 +49,6 @@ class NumberRain(context: Context, attrs: AttributeSet?) : LinearLayout(context,
             numberRainItem.startOffset = (Math.random() * 1000).toLong()
             addView(numberRainItem, layoutParams)
         }
-
     }
 
 }

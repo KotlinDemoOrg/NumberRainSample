@@ -8,6 +8,7 @@ import android.util.AttributeSet
 import android.view.View
 
 class NumberRainItem(context: Context, attrs: AttributeSet?) : View(context, attrs) {
+
     private lateinit var paint: Paint
 
     var textSize = 15 * resources.displayMetrics.density
@@ -35,7 +36,6 @@ class NumberRainItem(context: Context, attrs: AttributeSet?) : View(context, att
         }
 
     private var nowHeight = 0f
-
     private var hightLightNumIndex = 0
 
     var startOffset = 0L
@@ -72,13 +72,11 @@ class NumberRainItem(context: Context, attrs: AttributeSet?) : View(context, att
         super.onDraw(canvas)
         configPaint()
         canvas?.let {
-
             if (isShowAllNumber()) {
                 drawTotalNumbers(it)
             } else {
                 drawPartNumbers(it)
             }
-
         }
     }
 
@@ -95,7 +93,6 @@ class NumberRainItem(context: Context, attrs: AttributeSet?) : View(context, att
         val count = (nowHeight / textSize).toInt()
         nowHeight += textSize
         drawNumbers(canvas, count)
-
     }
 
     private fun drawTotalNumbers(canvas: Canvas) {
